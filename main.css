@@ -115,7 +115,7 @@ nav a:focus {
 
 
 header {
-    height: 80vh;
+    height: 100vh;
     background-image: url(images/hero-bg.jpg);
     background-size: cover;
     background-position-x: 60%;
@@ -150,7 +150,6 @@ header {
 }
 
 .hero {
-    height: 70vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
