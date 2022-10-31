@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="main.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div class="container nav-bar">
+        <div class="logo"><img src="images/logo.svg" alt="" /></div>
+        <nav>
+          <img class="close" src="images/close.svg" alt="" />
+          <ul>
+            <li><a class="home" href="index.html">home</a></li>
+            <li><a href="#">about us</a></li>
+            <li><a href="#">contact</a></li>
+          </ul>
+        </nav>
+        <img class="menu" src="images/menu.svg" alt="" />
+      </div>
+      <div class="container hero">
+        <h1 class="title">
+          The only marketing agency on <span>a mission from God</span>, fully
+          dedicated to increase your web traffic.
+        </h1>
+        <h2 class="sub-title">
+          We’re two brothers from Chicago that are trying to pay back our debt.
+          We can help you with <strong>SEO, SEM, content marketing</strong> and
+          whatever else.
+        </h2>
+        <a href="" class="btn btn-contact">contact us</a>
+      </div>
+    </header>
+
+    <section>
+      <div class="container section-container">
+        <div class="about">
+          <h2>About Us</h2>
+          <p>
+            We grew up in downtown Chicago, and we used to play in a band.
+            <strong> Jake loves fried chicken </strong>, and
+            <strong> Elwood loves dry white toast. </strong>
+          </p>
+        </div>
+        <div class="skills">
+          <h2>Our skills</h2>
+          <p>
+            Elwood is an expert in
+            <strong>SEO, SEM, and driving from the police</strong>. Jake is our
+            <strong>social media specialist</strong>, and he has an amazing
+            voice.
+          </p>
+        </div>
+        <div class="get-in-touch">
+          <h2>Get in touch</h2>
+          <p>
+            Send us an email with some info about what help you need and
+            <strong> we’ll drive over to your place </strong> in our Bluesmobile
+            the following day to discuss the deal.
+          </p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="container footer-container">
+        <div class="icons">
+          <img src="images/fb.svg" alt="" />
+          <img src="images/twitter.svg" alt="" />
+          <img src="images/insta.svg" alt="" />
+        </div>
+        <div class="footer-left-col">
+          <div>
+            <img class="footer-logo" src="images/logo.svg" alt="" />
+            <p class="footer-text">
+              Two brothers from Chicago that are just trying to pay back their
+              debt by helping others with their SEO, SEM, and Content Marketing
+              needs.
+            </p>
+          </div>
+          <p class="copyright">© Jake&Elwood 2019</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const menu = document.querySelector(".menu");
+      const close = document.querySelector(".close");
+      const nav = document.querySelector("nav");
+
+      menu.addEventListener("click", function () {
+        nav.classList.add("open");
+      });
+
+      close.addEventListener("click", function () {
+        nav.classList.remove("open");
+      });
+    </script>
+  </body>
+</html>
