@@ -113,11 +113,20 @@ nav a:focus {
 
 
 header {
-    height: 100vh;
+    height: 10vh;
+    background-color: black;
+
+
+}
+
+.hero-section {
     background-image: url(images/hero-bg.jpg);
     background-size: cover;
     background-position-x: 60%;
     color: white;
+    height: 90vh;
+
+
 }
 
 .nav-bar {
@@ -125,6 +134,8 @@ header {
     justify-content: space-between;
     align-items: center;
     height: 10vh;
+    border: 3px solid deeppink;
+
 
 }
 
@@ -149,13 +160,14 @@ header {
 }
 
 .hero {
-    height: auto;
-    height: 90vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 2em;
     line-height: 1.3;
+    border: 3px solid red;
+
 
 
 }
@@ -193,13 +205,13 @@ h1 span {
 
 
 
-section h2 {
+h2 {
     position: relative;
     display: inline-block;
     margin-bottom: 1em;
 }
 
-section h2::before {
+h2::before {
     position: absolute;
     content: "";
     bottom: -0.5em;
@@ -239,6 +251,120 @@ footer {
     margin-bottom: 4em;
 }
 
+
+
+/* ABOUT PAGE */
+
+
+.about-section h1 {
+
+    font-size: 4.8rem;
+    margin-bottom: 0.3em;
+    position: relative;
+    display: inline-block;
+}
+
+.about-section h1::after {
+    position: absolute;
+    content: "";
+    bottom: 6px;
+    left: 0;
+    background-color: var(--main-color);
+    width: 110%;
+    height: 25px;
+    z-index: -1;
+}
+
+
+.about-text::before {
+    background: unset;
+}
+
+.about-text {
+    margin-bottom: 2.5em;
+}
+
+
+.about-image {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 5em;
+}
+
+.about-image::after {
+    position: absolute;
+    content: " ";
+    right: -10px;
+    bottom: -5px;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: -1;
+}
+
+.about-image::before {
+    position: absolute;
+    content: " ";
+    right: -20px;
+    bottom: -15px;
+    width: 100%;
+    height: 100%;
+    background-color: var(--main-color);
+    z-index: -2;
+}
+
+.about-section .box {
+
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.about-section h2::before {
+    position: absolute;
+    content: "";
+    bottom: -0.5em;
+    left: 0;
+    background-color: var(--main-color);
+    width: 80px;
+    height: 3px;
+    transform: translate(0);
+}
+
+
+.about-section .box p {
+    margin: 0;
+}
+
+
+
+.paragraph {
+    padding: 0.5em 0 1.5em 0;
+}
+
+
+.about-section .box:nth-child(1) {
+    margin-bottom: 4em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .open {
     right: 0;
 }
@@ -253,12 +379,6 @@ footer {
     html {
         font-size: 70%;
     }
-
-
-    /* header {
-        height: 100vh;
-    } */
-
 
     .nav-bar {
         justify-content: unset;
@@ -314,7 +434,8 @@ footer {
     .home:hover,
     .home:focus {
         color: unset;
-        transform: unset
+        transform: unset;
+        color: white;
     }
 
 
@@ -355,6 +476,29 @@ footer {
     .footer-left-col {
         flex: 2;
     }
+
+
+    .about-text {
+        max-width: 60%;
+        display: block;
+        margin: auto;
+    }
+
+
+
+    .section-flex {
+
+        margin-top: 5em;
+        display: flex;
+        gap: 5em;
+    }
+
+    .about-image {
+        align-self: flex-start;
+    }
+
+
+
 
 
 }
