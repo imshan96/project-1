@@ -192,7 +192,7 @@ h1 span {
     color: var(--main-color);
 }
 
-.btn-contact {
+.btn {
     color: black;
     background-color: var(--main-color);
     padding: 0.8em 1.5em;
@@ -204,8 +204,8 @@ h1 span {
     transition: 0.5s;
 }
 
-.btn-contact:hover,
-.btn-contact:focus {
+.btn:hover,
+.btn:focus {
     border: 2px solid white;
     color: var(--main-color);
     background: black;
@@ -229,6 +229,11 @@ h2::before {
     width: 50%;
     height: 4px;
     transform: translate(50%);
+}
+
+
+.hero-section h2::before {
+    width: 0;
 }
 
 section p {
@@ -265,7 +270,8 @@ footer {
 /* ABOUT PAGE */
 
 
-.about-section h1 {
+.about-section h1,
+.contact-section h1 {
 
     font-size: 4.8rem;
     margin-bottom: 0.3em;
@@ -273,34 +279,40 @@ footer {
     display: inline-block;
 }
 
-.about-section h1::after {
+.about-section h1::after,
+.contact-section h1::after {
     position: absolute;
     content: "";
     bottom: 6px;
     left: 0;
     background-color: var(--main-color);
     width: 110%;
-    height: 25px;
+    height: 30px;
     z-index: -1;
 }
 
-.about-text {
+.about-text,
+.contact-text {
     margin-bottom: 2.5em;
 }
 
-.about-image {
+.about-image,
+.contact-image {
     position: relative;
-    display: inline-block;
+    display: block;
     margin-bottom: 5em;
     width: 90%;
+    transform: translate(10px);
 }
 
-.about-image img {
+.about-image img,
+.contact-image img {
     height: 100%;
     width: 100%;
 }
 
-.about-image::after {
+.about-image::after,
+.contact-image::after {
     position: absolute;
     content: " ";
     right: -10px;
@@ -311,7 +323,8 @@ footer {
     z-index: -1;
 }
 
-.about-image::before {
+.about-image::before,
+.contact-image::before {
     position: absolute;
     content: " ";
     right: -20px;
@@ -343,7 +356,8 @@ footer {
 }
 
 /* CHANGE about-text::before */
-.about-section .about-text::before {
+.about-section .about-text::before,
+.contact-text::before {
     width: 0;
 }
 
@@ -366,20 +380,70 @@ footer {
 
 
 
+/* CONTACT PAGE */
+
+
+.contact-section span {
+    text-decoration: underline;
+}
+
+.contact-box {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-section img {
+    width: 100%;
+
+}
+
+
+
+form div {
+    margin-bottom: 1em;
+}
+
+
+
+
+label {
+    display: block;
+}
+
+input {
+    height: 40px;
+    padding-left: 0.5em;
+
+
+}
+
+textarea {
+    padding-left: 0.5em;
+    padding: .5em;
+}
+
+input,
+textarea {
+    font-size: inherit;
+    width: 100%;
+}
+
+
+.btn-submit {
+    align-self: flex-end;
+    padding: 0.5em 2em;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 1em;
+}
 
 
 
 
 
 
-
-
-
-
-
-
-
-
+/* NAV OPEN (JavaScript) */
 
 .open {
     right: 0;
@@ -494,7 +558,8 @@ footer {
     }
 
 
-    .about-text {
+    .about-text,
+    .contact-text {
         max-width: 60%;
         display: block;
         margin: auto;
@@ -519,13 +584,67 @@ footer {
 
     }
 
-    .about-section .about-text::before {
+    .about-section .about-text::before,
+    .contact-text::before {
         width: 150px;
         background-color: var(--secondary-color);
         bottom: -30px;
         height: 2px;
         left: 50%;
         transform: translate(-50%);
+    }
+
+
+
+    .contact-box {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 5em;
+        border: 1px solid deeppink;
+    }
+
+    .contact-box img {
+        grid-column: 1/2;
+        grid-row: 1/3;
+        height: 100%;
+    }
+
+    .input1 {
+
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+
+    .input2 {
+        grid-column: 3/-1;
+        grid-row: 1/2;
+    }
+
+    .input3 {
+        grid-column: 2/-1;
+        grid-row: 2/4;
+    }
+
+    .contact-box h2 {
+        grid-column: 1/2;
+        grid-row: 3/4;
+    }
+
+    .contact-box p {
+        grid-column: 1/2;
+        grid-row: 4/5;
+    }
+
+    .contact-box button {
+        grid-column: 3/-1;
+        grid-row: 4/5;
+        align-self: start;
+        justify-self: end;
+    }
+
+
+    .contact-box {
+        margin-top: 7em;
     }
 
 
