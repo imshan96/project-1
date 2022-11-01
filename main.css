@@ -291,6 +291,12 @@ footer {
     position: relative;
     display: inline-block;
     margin-bottom: 5em;
+    width: 90%;
+}
+
+.about-image img {
+    height: 100%;
+    width: 100%;
 }
 
 .about-image::after {
@@ -332,6 +338,7 @@ footer {
     width: 80px;
     height: 3px;
     transform: translate(0);
+
 }
 
 
