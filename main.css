@@ -64,8 +64,8 @@ nav {
     position: fixed;
     right: 0;
     top: 0;
-    width: 50%;
-    background: white;
+    width: 40%;
+    background: var(--main-color);
     height: 100vh;
     z-index: 4000;
     right: -100%;
@@ -88,7 +88,7 @@ nav a {
 
 nav a:hover,
 nav a:focus {
-    background: #faf3b4
+    background: rgb(211, 211, 211);
 }
 
 
