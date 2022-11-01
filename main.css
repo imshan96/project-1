@@ -343,7 +343,8 @@ footer {
 }
 
 
-.about-section h2::before {
+.about-section h2::before,
+.contact-box h2::before {
     position: absolute;
     content: "";
     bottom: -0.5em;
@@ -430,12 +431,16 @@ textarea {
 }
 
 
+.input-box {
+    margin-bottom: 1.5em;
+}
+
 .btn-submit {
     align-self: flex-end;
-    padding: 0.5em 2em;
+    padding: 0.5em 3em;
     cursor: pointer;
     display: inline-block;
-    margin-top: 1em;
+    font-size: inherit;
 }
 
 
