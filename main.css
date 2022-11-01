@@ -277,15 +277,9 @@ footer {
     z-index: -1;
 }
 
-
-.about-text::before {
-    background: unset;
-}
-
 .about-text {
     margin-bottom: 2.5em;
 }
-
 
 .about-image {
     position: relative;
@@ -340,6 +334,12 @@ footer {
     transform: translate(0);
 
 }
+
+/* CHANGE about-text::before */
+.about-section .about-text::before {
+    width: 0;
+}
+
 
 
 .about-section .box p {
@@ -497,7 +497,7 @@ footer {
 
     .section-flex {
 
-        margin-top: 5em;
+        margin-top: 7em;
         display: flex;
         gap: 5em;
     }
@@ -505,6 +505,16 @@ footer {
     .about-image {
         align-self: flex-start;
     }
+
+    .about-section .about-text::before {
+        width: 150px;
+        background-color: var(--secondary-color);
+        bottom: -30px;
+        height: 2px;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
 
 
 
