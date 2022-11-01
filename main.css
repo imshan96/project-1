@@ -151,7 +151,7 @@ header {
 
 .hero {
     height: 100%;
-    border: 3px solid white;
+    border: 3px solid deeppink;
     display: flex;
     flex-direction: column;
     gap: 1.5em;
